@@ -1,0 +1,47 @@
+
+
+import 'package:cinemapedia/domain/datasources/movies_datasource.dart';
+import 'package:cinemapedia/domain/entities/movie.dart';
+import 'package:cinemapedia/domain/repositories/movies_repository.dart';
+
+class MovieRepositoryImpl extends MoviesRepository {
+  final MoviesDatasource datasource;
+
+  MovieRepositoryImpl(this.datasource);
+
+  @override
+  Future<List<Movie>> getNowPlaying({int page = 1}) {
+    return datasource.getNowPlaying(page: page);
+  }
+  
+  @override
+  Future<Movie> getMovieById(String id) {
+    // TODO: implement getMovieById
+    throw UnimplementedError();
+  }
+  
+  @override
+  Future<List<Movie>> getPopular({int page = 1}) {
+    // TODO: implement getPopular
+    throw UnimplementedError();
+  }
+  
+  @override
+  Future<List<Movie>> getTopRated({int page = 1}) {
+    // TODO: implement getTopRated
+    throw UnimplementedError();
+  }
+  
+  @override
+  Future<List<Movie>> getUpcoming({int page = 1}) {
+    // TODO: implement getUpcoming
+    throw UnimplementedError();
+  }
+  
+  @override
+  Future<List<Movie>> searchMovies(String query) {
+    // TODO: implement searchMovies
+    throw UnimplementedError();
+  }
+
+}
