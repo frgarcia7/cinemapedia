@@ -22,20 +22,17 @@ class MovieRepositoryImpl extends MoviesRepository {
   
   @override
   Future<List<Movie>> getPopular({int page = 1}) {
-    // TODO: implement getPopular
-    throw UnimplementedError();
+    return datasource.getPopular(page: page);
   }
   
   @override
   Future<List<Movie>> getTopRated({int page = 1}) {
-    // TODO: implement getTopRated
-    throw UnimplementedError();
+    return datasource.getTopRated(page: page);
   }
   
   @override
   Future<List<Movie>> getUpcoming({int page = 1}) {
-    // TODO: implement getUpcoming
-    throw UnimplementedError();
+    return datasource.getUpcoming(page: page);
   }
   
   @override
